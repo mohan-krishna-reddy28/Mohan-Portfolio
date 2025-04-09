@@ -34,7 +34,7 @@ I aim to respond to security reports **within 48 hours** and will update you thr
 
 This policy applies to:
 
-- My personal portfolio website (hosted at https://github.com/mohan-krishna-reddy28/Portfolio)
+- My personal portfolio website (hosted at https://github.com/mohan-krishna-reddy28/Portfolio/)
 - Any public projects linked from the site
 
 ---
