@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,36 +10,36 @@
   <meta name="author" content="Mohan Krishna Reddy">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="style.css" />
-  <!-- Optional favicon -->
-  <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
+   <link rel="icon" href="data:,">
   <title>Certifications | Mohan Krishna Reddy</title>
 </head>
 
 <body>
-  <div id="sidebar">
-    <span class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">&#10005;</span>
-    <div class="nav-right">
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="internships.html">Internships</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contactMe.html">Contact Me</a>
-    </div>
-  </div>
-
-  <nav>
-    <div class="hamburger" onclick="toggleSidebar()" aria-label="Open navigation menu">&#9776;</div>
-    <div class="logo"><a href="index.html">Portfolio</a></div>
-    <div class="nav-right">
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="internships.html">Internships</a>
-      <a href="certificates.html">Certifications</a>
-      <a href="contactMe.html">Contact Me</a>
-    </div>
-  </nav>
+    <div id="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">&#10005;</span> <!-- This is the "X" button -->
+        <div class="nav-right">
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="internships.html">Internships</a>
+          <a href="certificates.html">Certifications</a>
+          <a href="contactMe.html">Contact Me</a>
+        </div>
+      </div>
+    
+      <!-- Navigation -->
+      <nav>
+        <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+        <div class="logo"><a href="index.html">Portfolio</a></div>
+        <div class="nav-right">
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="internships.html">Internships</a>
+          <a href="certificates.html">Certifications</a>
+          <a href="contactMe.html">Contact Me</a>
+        </div>
+      </nav>
 
   <section id="certifications">
     <h2>Certifications</h2>
@@ -47,23 +48,22 @@
       <li>
         <strong>NPTEL – Database Management Systems (DBMS)</strong><br>
         Completed a 12-week course from NPTEL (IIT-led platform) on database fundamentals including ER models, relational algebra, normalization, and SQL.<br>
-        <a href="NPTEL(DBMS).pdf" target="_blank" rel="noopener noreferrer" class="btn">View Certificate</a>
+        <a href="NPTEL(DBMS).pdf" target="_blank" class="btn">View Certificate</a>
       </li><br>
 
       <li>
         <strong>CCNA – Introduction to Networks</strong><br>
         Acquired foundational networking knowledge including OSI Model, TCP/IP, IP addressing, and Ethernet operations.<br>
-        <a href="CCNA(Introduction to networks).pdf" target="_blank" rel="noopener noreferrer" class="btn">View Certificate</a>
+        <a href="CCNA(Introduction to networks).pdf" target="_blank" class="btn">View Certificate</a>
       </li><br>
 
       <li>
         <strong>EDUNET Foundation & AICTE – IBM SkillBuild</strong><br>
         Completed modules on cloud computing, soft skills, and agile methodologies through IBM SkillBuild platform.<br>
-        <a href="EDUNET FOUNDATION and AICTE (IBM SkillBuild).pdf" target="_blank" rel="noopener noreferrer" class="btn">View Certificate</a>
+        <a href="EDUNET FOUNDATION and AICTE (IBM SkillBuild).pdf" target="_blank" class="btn">View Certificate</a>
       </li>
     </ul>
   </section>
-
   <script>
     const sidebar = document.getElementById("sidebar");
     const hamburger = document.querySelector(".hamburger");
@@ -76,25 +76,28 @@
       sidebar.classList.remove("open");
     }
 
+    // Open sidebar on hamburger click
     hamburger.addEventListener("click", openSidebar);
 
     function updateNavLinks() {
       const navRight = document.querySelector("nav .nav-right");
       if (window.innerWidth < 845) {
-        navRight.innerHTML = "";
+        navRight.innerHTML = ""; // Clear the nav-right links
       } else {
         navRight.innerHTML = `
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="projects.html">Projects</a>
-          <a href="internships.html">Internships</a>
-          <a href="certificates.html">Certifications</a>
-          <a href="contactMe.html">Contact Me</a>
-        `;
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="internships.html">Internships</a>
+        <a href="certificates.html">Certifications</a>
+        <a href="contactMe.html">Contact Me</a>
+      `;
       }
     }
 
     window.addEventListener("load", updateNavLinks);
+
+
     window.addEventListener("resize", updateNavLinks);
   </script>
 </body>
