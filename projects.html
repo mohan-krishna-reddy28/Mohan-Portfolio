@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +9,13 @@
   <meta name="author" content="Mohan Krishna Reddy">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:,">
+  <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
   <title>Projects | Mohan Krishna Reddy</title>
 </head>
 
 <body>
   <div id="sidebar">
-    <span class="close-btn" onclick="closeSidebar()">&#10005;</span> <!-- This is the "X" button -->
+    <span class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">&#10005;</span>
     <div class="nav-right">
       <a href="about.html">About</a>
       <a href="skills.html">Skills</a>
@@ -27,9 +26,8 @@
     </div>
   </div>
 
-  <!-- Navigation -->
   <nav>
-    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    <div class="hamburger" onclick="toggleSidebar()" aria-label="Open navigation menu">&#9776;</div>
     <div class="logo"><a href="index.html">Portfolio</a></div>
     <div class="nav-right">
       <a href="about.html">About</a>
@@ -46,28 +44,26 @@
 
     <div class="project">
       <p><strong>Netflix Clone</strong> – A static clone of the Netflix login page built using HTML and CSS to showcase front-end skills.</p>
-      <a href="https://github.com/mohan-krishna-reddy28/netflix_Clone" class="btn" target="_blank">View Code</a>
-      <a href="netfilx.html" class="btn" target="_blank">View Page</a>
+      <a href="https://github.com/mohan-krishna-reddy28/netflix_Clone" class="btn" target="_blank" rel="noopener noreferrer">View Code</a>
+      <a href="neto.html" class="btn" target="_blank" rel="noopener noreferrer">View Page</a>
     </div>
 
     <br>
 
     <div class="project">
       <p><strong>Train Booking System</strong> – A Java project showcasing Object-Oriented Programming concepts like Encapsulation, Inheritance, and Polymorphism for managing booking and user data.</p>
-      <a href="https://github.com/mohan-krishna-reddy28/Train_Booking_System" class="btn" target="_blank">View Code</a>
+      <a href="https://github.com/mohan-krishna-reddy28/Train_Booking_System" class="btn" target="_blank" rel="noopener noreferrer">View Code</a>
     </div>
 
     <div class="project">
-      <p>
-        <strong>Portfolio Website</strong> – A personal portfolio website created using HTML, CSS to showcase my skills, projects, certifications, and contact details. The site is structured with separate pages for each section and features a responsive design. It serves as a digital resume to present my work and achievements to recruiters and visitors.
-      </p>
-      <a href="https://github.com/mohan-krishna-reddy28/Portfolio" class="btn" target="_blank">View Code</a>
-      <a href="http://127.0.0.1:3000/Portfolio/index.html" class="btn" target="_blank">View Code</a>
+      <p><strong>Portfolio Website</strong> – A personal portfolio website created using HTML, CSS to showcase my skills, projects, certifications, and contact details.</p>
+      <a href="https://github.com/mohan-krishna-reddy28/Portfolio" class="btn" target="_blank" rel="noopener noreferrer">View Code</a>
+      <a href="https://mohan-krishna-reddy28.github.io/portfolio/" class="btn" target="_blank" rel="noopener noreferrer">View Page</a>
     </div>
-    
-    <br>
 
+    <br>
   </section>
+
   <script>
     const sidebar = document.getElementById("sidebar");
     const hamburger = document.querySelector(".hamburger");
@@ -80,28 +76,25 @@
       sidebar.classList.remove("open");
     }
 
-    // Open sidebar on hamburger click
     hamburger.addEventListener("click", openSidebar);
 
     function updateNavLinks() {
       const navRight = document.querySelector("nav .nav-right");
       if (window.innerWidth < 845) {
-        navRight.innerHTML = ""; // Clear the nav-right links
+        navRight.innerHTML = "";
       } else {
         navRight.innerHTML = `
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="internships.html">Internships</a>
-        <a href="certificates.html">Certifications</a>
-        <a href="contactMe.html">Contact Me</a>
-      `;
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="internships.html">Internships</a>
+          <a href="certificates.html">Certifications</a>
+          <a href="contactMe.html">Contact Me</a>
+        `;
       }
     }
 
     window.addEventListener("load", updateNavLinks);
-
-
     window.addEventListener("resize", updateNavLinks);
   </script>
 </body>

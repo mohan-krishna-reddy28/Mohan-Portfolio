@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,35 +9,34 @@
   <meta name="author" content="Mohan Krishna Reddy">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:,">
+  <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
   <title>Contact Me | Mohan Krishna Reddy</title>
 </head>
 <body>
-    <div id="sidebar">
-        <span class="close-btn" onclick="closeSidebar()">&#10005;</span> <!-- This is the "X" button -->
-        <div class="nav-right">
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="projects.html">Projects</a>
-          <a href="internships.html">Internships</a>
-          <a href="certificates.html">Certifications</a>
-          <a href="contactMe.html">Contact Me</a>
-        </div>
-      </div>
-    
-      <!-- Navigation -->
-      <nav>
-        <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
-        <div class="logo"><a href="index.html">Portfolio</a></div>
-        <div class="nav-right">
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="projects.html">Projects</a>
-          <a href="internships.html">Internships</a>
-          <a href="certificates.html">Certifications</a>
-          <a href="contactMe.html">Contact Me</a>
-        </div>
-      </nav>
+  <div id="sidebar">
+    <span class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">&#10005;</span>
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="contactMe.html">Contact Me</a>
+    </div>
+  </div>
+
+  <nav>
+    <div class="hamburger" onclick="toggleSidebar()" aria-label="Open navigation menu">&#9776;</div>
+    <div class="logo"><a href="index.html">Portfolio</a></div>
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="contactMe.html">Contact Me</a>
+    </div>
+  </nav>
 
   <section id="contact">
     <h2>Contact Me</h2>
@@ -46,17 +44,18 @@
     <p><strong>Phone:</strong> 7799643499</p>
 
     <div class="links">
-      <a href="https://www.linkedin.com/in/mohan-krishna-reddy-1919b7230/" target="_blank">
+      <a href="https://www.linkedin.com/in/mohan-krishna-reddy-1919b7230/" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-linkedin"></i> LinkedIn
       </a>
-      <a href="https://github.com/mohan-krishna-reddy28" target="_blank">
+      <a href="https://github.com/mohan-krishna-reddy28" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-github"></i> GitHub
       </a>
-      <a href="https://www.instagram.com/mohan.28803/" target="_blank">
+      <a href="https://www.instagram.com/mohan.28803/" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-instagram"></i> Instagram
       </a>
     </div>
   </section>
+
   <script>
     const sidebar = document.getElementById("sidebar");
     const hamburger = document.querySelector(".hamburger");
@@ -69,28 +68,25 @@
       sidebar.classList.remove("open");
     }
 
-    // Open sidebar on hamburger click
     hamburger.addEventListener("click", openSidebar);
 
     function updateNavLinks() {
       const navRight = document.querySelector("nav .nav-right");
       if (window.innerWidth < 845) {
-        navRight.innerHTML = ""; // Clear the nav-right links
+        navRight.innerHTML = "";
       } else {
         navRight.innerHTML = `
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="internships.html">Internships</a>
-        <a href="certificates.html">Certifications</a>
-        <a href="contactMe.html">Contact Me</a>
-      `;
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="internships.html">Internships</a>
+          <a href="certificates.html">Certifications</a>
+          <a href="contactMe.html">Contact Me</a>
+        `;
       }
     }
 
     window.addEventListener("load", updateNavLinks);
-
-
     window.addEventListener("resize", updateNavLinks);
   </script>
 </body>

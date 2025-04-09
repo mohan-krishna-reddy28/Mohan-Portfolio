@@ -10,13 +10,14 @@
   <meta name="author" content="Mohan Krishna Reddy">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:,">
+  <!-- Optional favicon -->
+  <!-- <link rel="icon" href="favicon.png" type="image/png"> -->
   <title>Internships | Mohan Krishna Reddy</title>
 </head>
 
 <body>
   <div id="sidebar">
-    <span class="close-btn" onclick="closeSidebar()">&#10005;</span> <!-- This is the "X" button -->
+    <span class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">&#10005;</span>
     <div class="nav-right">
       <a href="about.html">About</a>
       <a href="skills.html">Skills</a>
@@ -27,9 +28,8 @@
     </div>
   </div>
 
-  <!-- Navigation -->
   <nav>
-    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    <div class="hamburger" onclick="toggleSidebar()" aria-label="Open navigation menu">&#9776;</div>
     <div class="logo"><a href="index.html">Portfolio</a></div>
     <div class="nav-right">
       <a href="about.html">About</a>
@@ -46,9 +46,9 @@
 
     <p><strong>Cybersecurity Internship</strong> – EDUNET FOUNDATION & AICTE (IBM SkillBuild)</p>
     <p>Worked on Steganography: Hiding images using Python.</p>
-    <a href="https://github.com/mohan-krishna-reddy28/Steganography" class="btn" target="_blank">View Code</a>
-
+    <a href="https://github.com/mohan-krishna-reddy28/Steganography" class="btn" target="_blank" rel="noopener noreferrer">View Code</a>
   </section>
+
   <script>
     const sidebar = document.getElementById("sidebar");
     const hamburger = document.querySelector(".hamburger");
@@ -61,28 +61,25 @@
       sidebar.classList.remove("open");
     }
 
-    // Open sidebar on hamburger click
     hamburger.addEventListener("click", openSidebar);
 
     function updateNavLinks() {
       const navRight = document.querySelector("nav .nav-right");
       if (window.innerWidth < 845) {
-        navRight.innerHTML = ""; // Clear the nav-right links
+        navRight.innerHTML = "";
       } else {
         navRight.innerHTML = `
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="internships.html">Internships</a>
-        <a href="certificates.html">Certifications</a>
-        <a href="contactMe.html">Contact Me</a>
-      `;
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="internships.html">Internships</a>
+          <a href="certificates.html">Certifications</a>
+          <a href="contactMe.html">Contact Me</a>
+        `;
       }
     }
 
     window.addEventListener("load", updateNavLinks);
-
-
     window.addEventListener("resize", updateNavLinks);
   </script>
 </body>
