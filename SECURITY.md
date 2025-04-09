@@ -8,7 +8,7 @@ If you find a security issue or vulnerability on this website, **please do not c
 
 Instead, contact me directly at:
 
-**📧 Email:** mohan.krishna.reddy.dev@gmail.com  
+**📧 Email:** mohankrishna28803@gmail.com
 (Or any preferred contact method you use)
 
 Please include as much detail as possible to help me understand and fix the issue quickly.
@@ -34,7 +34,7 @@ I aim to respond to security reports **within 48 hours** and will update you thr
 
 This policy applies to:
 
-- My personal portfolio website (hosted at [your-portfolio-url.com])
+- My personal portfolio website (hosted at https://github.com/mohan-krishna-reddy28/Portfolio)
 - Any public projects linked from the site
 
 ---
