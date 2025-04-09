@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohan Krishna Reddy | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="sidebar">
+    <span class="close-btn" onclick="closeSidebar()">&#10005;</span>
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="contactMe.html">Contact Me</a>
+    </div>
+  </div>
+
+  <nav>
+    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    <div class="logo"><a href="index.html">Portfolio</a></div>
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="contactMe.html">Contact Me</a>
+    </div>
+  </nav>
+
+
+
+
+  <header id="home">
+    <h1><span>Hi!</span> Mohan Krishna Reddy</h1>
+    <p>Aspiring Software Developer | B.Tech CSE (8.9 CGPA)</p>
+    <p>Motivated to apply theoretical knowledge in real-world tech solutions.</p>
+    <a href="My_resume.pdf" class="btn" target="_blank">View Resume</a>
+  </header>
+
+
+  <section id="intro" style="text-align:center; padding: 40px 20px;">
+    <h2 style="color: #00ffcc;">Welcome to My Portfolio</h2>
+    <p>
+      I'm a dedicated and enthusiastic Computer Science Engineering student from <b>Sri Venkateswara College of
+        Engineering, Tirupati</b>,
+      with a strong foundation in Java, MySQL, HTML, CSS, and JavaScript. With hands-on experience in both academic and
+      personal projects,
+      I'm keen to contribute to innovative software solutions.
+    </p>
+    <p>
+      My journey includes building a Netflix Clone using HTML/CSS, developing a Java-based Library Management System,
+      and a console-based Bank Management Application.
+      I’ve also explored cybersecurity through a Steganography internship.
+    </p>
+    <p>
+      I'm always eager to learn, passionate about problem-solving, and enjoy turning ideas into reality with code.
+    </p>
+  </section>
+
+
+  <section id="education" style="text-align:center; padding: 20px;">
+    <h2 style="color: #00ffcc;">Education Highlights</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li><strong>B.Tech (CSE)</strong> – Sri Venkateswara College of Engineering, Tirupati – <em>8.9 CGPA</em></li>
+      <li><strong>Intermediate</strong> – Narayana Jr College – <em>94%</em></li>
+      <li><strong>10th Class</strong> – Narayana School – <em>9.7 GPA</em></li>
+    </ul>
+  </section>
+
+  <section style="background-color: #1e1e1e; color: #fff; padding: 30px; text-align: center;">
+    <h3>"Hard work never goes unnoticed — it always pays off in the end."</h3>
+    <p>- Mohan Krishna Reddy</p>
+  </section>
+
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const hamburger = document.querySelector(".hamburger");
+
+    function openSidebar() {
+      sidebar.classList.add("open");
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove("open");
+    }
+
+
+    hamburger.addEventListener("click", openSidebar);
+
+    function updateNavLinks() {
+      const navRight = document.querySelector("nav .nav-right");
+      if (window.innerWidth < 845) {
+        navRight.innerHTML = "";
+      } else {
+        navRight.innerHTML = `
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="internships.html">Internships</a>
+        <a href="certificates.html">Certifications</a>
+        <a href="contactMe.html">Contact Me</a>
+      `;
+      }
+    }
+
+    window.addEventListener("load", updateNavLinks);
+
+
+    window.addEventListener("resize", updateNavLinks);
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Mohan Krishna Reddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="sidebar">
+    <span class="close-btn" onclick="closeSidebar()">&#10005;</span> <!-- This is the "X" button -->
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="contactMe.html">Contact Me</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    <div class="logo"><a href="index.html">Portfolio</a></div>
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certificates.html">Certifications</a>
+      <a href="contactMe.html">Contact Me</a>
+    </div>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>Mohan Krishna Reddy</strong>, a passionate and dedicated Computer Science Engineering student from <strong>Sri Venkateswara College of Engineering, Tirupati</strong>, with a CGPA of <strong>8.9</strong>.</p>
+    
+    <p>I love exploring the world of software development, and I enjoy building practical applications using my technical skills. I’m particularly interested in web development, Java-based programming, and cybersecurity. My goal is to build a successful career as a full-stack or backend developer.</p>
+
+    <p>I have worked on projects like a <strong>Netflix clone</strong>, <strong>Library Management System</strong>, and a <strong>Bank Application</strong> using Java and file handling. I also completed a cybersecurity internship focused on <strong>Steganography using Python</strong>.</p>
+
+    <p>My journey so far has been enriched by several certifications including <strong>NPTEL (DBMS)</strong>, <strong>CCNA (Cyber Security & Networking)</strong>, and one from <strong>IBM SkillBuild</strong> in collaboration with AICTE and Edunet Foundation.</p>
+
+    <p><strong>Education:</strong></p>
+    <ul>
+      <li><strong>B.Tech in CSE</strong> (2021–2025) – 8.9 CGPA – SVCE, Tirupati</li>
+      <li><strong>12th</strong> (94%) – Narayana Jr College</li>
+      <li><strong>10th</strong> (9.7 GPA) – Narayana School</li>
+    </ul>
+
+    <p><strong>Hobbies:</strong> Coding, Watching Cricket, Movies/Series</p>
+    <p><strong>Languages Known:</strong> English, Telugu, Hindi</p>
+  </section>
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const hamburger = document.querySelector(".hamburger");
+
+    function openSidebar() {
+      sidebar.classList.add("open");
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove("open");
+    }
+
+    // Open sidebar on hamburger click
+    hamburger.addEventListener("click", openSidebar);
+
+    function updateNavLinks() {
+      const navRight = document.querySelector("nav .nav-right");
+      if (window.innerWidth < 845) {
+        navRight.innerHTML = ""; // Clear the nav-right links
+      } else {
+        navRight.innerHTML = `
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="internships.html">Internships</a>
+        <a href="certificates.html">Certifications</a>
+        <a href="contactMe.html">Contact Me</a>
+      `;
+      }
+    }
+
+    // Run on page load
+    window.addEventListener("load", updateNavLinks);
+
+    // Run on screen resize
+    window.addEventListener("resize", updateNavLinks);
+  </script>
+</body>
+</html>
