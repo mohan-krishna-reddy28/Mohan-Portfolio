@@ -4,7 +4,12 @@ body {
   background-color: #121212;
   color: #fff;
 }
-
+.modal-content{
+  background-color: #121212;
+}
+.modal-header{
+  background-color: #1e1e1e;
+}
 /* NAVIGATION */
 nav {
   display: flex;
@@ -89,6 +94,9 @@ h1 span {
   letter-spacing: 2px;
 }
 
+.close{
+  background-color: red !important;
+}
 .btn {
   display: inline-block;
   margin-top: 10px;

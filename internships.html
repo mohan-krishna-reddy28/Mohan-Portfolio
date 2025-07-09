@@ -3,6 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Mohan Krishna Reddy's Portfolio showcasing skills, projects, and experience.">
@@ -11,7 +18,6 @@
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="style.css" />
 
-  <link rel="icon" href="data:,">
   <title>Internships | Mohan Krishna Reddy</title>
 </head>
 
@@ -46,8 +52,33 @@
     <h2>Internships</h2>
 
     <p><strong>Cybersecurity Internship</strong> – EDUNET FOUNDATION & AICTE (IBM SkillBuild)</p>
-    <p>Worked on Steganography: Hiding images using Python.</p>
+    <p>Worked on <strong>Steganography: Hiding images using Python.</strong></p>
     <a href="https://github.com/mohan-krishna-reddy28/Steganography" class="btn" target="_blank">View Code</a>
+    <button class="btn" data-toggle="modal" data-target="#ibmModal">View Certificate</button>
+
+    <!-- IBM SkillBuild Certificate Modal -->
+<div class="modal fade" id="ibmModal" tabindex="-1" aria-labelledby="ibmLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" style="max-width: 60%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ibmLabel">IBM SkillBuild Certificate</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="text-white" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe src="https://docs.google.com/gview?url=https://mohan-krishna-reddy28.github.io/portfolio/EDUNET%20FOUNDATION%20and%20AICTE%20(IBM%20SkillBuild).pdf&embedded=true"
+                width="100%" height="500px" style="border: none;"></iframe>
+      </div>
+      <div class="modal-footer">
+        <a href="https://mohan-krishna-reddy28.github.io/portfolio/EDUNET%20FOUNDATION%20and%20AICTE%20(IBM%20SkillBuild).pdf" 
+           class="btn" download>
+          Download Certificate
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
   </section>
   <script>
