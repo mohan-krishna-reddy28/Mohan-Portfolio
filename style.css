@@ -1,26 +1,56 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
+  background-image: url("ChatGPT\ Image\ Jul\ 13\,\ 2025\,\ 08_46_39\ PM.png");
+  background-size: cover;
+  color: #fff;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
   color: #fff;
 }
-.modal-content{
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.nav-right a.active {
+  color:#a64bf4;
+  font-weight: bold;
+}
+.nav-right a.active::after {
+  width: 100%;
+  background-color:#a64bf4; 
+}
+
+
+
+.modal-content {
   background-color: #121212;
 }
-.modal-header{
+
+.modal-header {
   background-color: #1e1e1e;
 }
+
 /* NAVIGATION */
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #1e1e1e;
-  padding: 10px 80px;
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  
+
 }
 
 .logo {
@@ -44,6 +74,7 @@ nav {
   color: #aaa;
   text-decoration: none;
   font-size: 18px;
+  width: max-content;
   transition: color 0.3s ease-in-out;
 }
 
@@ -59,7 +90,8 @@ nav {
 }
 
 .nav-right a:hover {
-  color: #00ffcc;
+  color: white;
+
 }
 
 .nav-right a:hover::after {
@@ -79,24 +111,29 @@ nav {
 }
 
 /* Sections */
-header, section {
+header,
+section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #00ffcc;
 }
+
 
 h1 span {
   color: white;
   letter-spacing: 2px;
 }
 
-.close{
+
+.close {
   background-color: red !important;
 }
+
 .btn {
   display: inline-block;
   margin-top: 10px;
@@ -104,13 +141,19 @@ h1 span {
   border: 1px solid #00ffcc;
   color: #00ffcc;
   text-decoration: none;
-  transition: 0.3s;
+  background: linear-gradient(to right, #00ffcc 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.4s ease, color 0.4s ease;
 }
 
 .btn:hover {
-  background-color: #00ffcc;
+  background-position: left bottom;
   color: #121212;
 }
+
+
+
 
 ul {
   padding-left: 20px;
@@ -137,9 +180,17 @@ ul {
   text-decoration: none;
 }
 
-.links a:hover i.fa-linkedin { color: #0077b5; }
-.links a:hover i.fa-github { color: #6a6868; }
-.links a:hover i.fa-instagram { color: #C13584; }
+.links a:hover i.fa-linkedin {
+  color: #0077b5;
+}
+
+.links a:hover i.fa-github {
+  color: #6a6868;
+}
+
+.links a:hover i.fa-instagram {
+  color: #C13584;
+}
 
 /* ---------- Responsive Styles ---------- */
 @media (max-width: 1024px) {
@@ -151,7 +202,8 @@ ul {
     font-size: 16px;
   }
 
-  header, section {
+  header,
+  section {
     padding: 50px 30px;
   }
 }
@@ -177,7 +229,8 @@ ul {
     font-size: 15px;
   }
 
-  header, section {
+  header,
+  section {
     padding: 30px 15px;
   }
 
@@ -227,6 +280,7 @@ ul {
     transform: translateX(-50%);
   }
 }
+
 .close-btn {
   position: absolute;
   top: 15px;

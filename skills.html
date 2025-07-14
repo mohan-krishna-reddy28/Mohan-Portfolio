@@ -3,13 +3,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Mohan Krishna Reddy's Portfolio showcasing skills, projects, and experience.">
@@ -24,9 +17,10 @@
 
 <body>
   <div id="sidebar">
-    <span class="close-btn" onclick="closeSidebar()">&#10005;</span>
+    <span class="close-btn" onclick="closeSidebar()" aria-label="Close sidebar">&#10005;</span>
     <div class="nav-right">
-      <a href="about.html">About</a>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
       <a href="skills.html">Skills</a>
       <a href="projects.html">Projects</a>
       <a href="internships.html">Internships</a>
@@ -35,12 +29,12 @@
     </div>
   </div>
 
-
   <nav>
     <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
     <div class="logo"><a href="index.html">Portfolio</a></div>
     <div class="nav-right">
-      <a href="about.html">About</a>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
       <a href="skills.html">Skills</a>
       <a href="projects.html">Projects</a>
       <a href="internships.html">Internships</a>
@@ -52,16 +46,20 @@
   <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li><strong>Programming Languages:</strong>  Java, MySQL, Python (Beginner)</li>
-      <li><strong>Web Technologies:</strong>   HTML, CSS</li>
-      <li><strong>Developer Tools:</strong>  Visual Studio Code,Intellij</li>
+      <li><strong>Programming Languages:</strong> Java, MySQL, Python (Beginner)</li>
+      <li><strong>Web Technologies:</strong> HTML, CSS</li>
+      <li><strong>Developer Tools:</strong> Visual Studio Code,Intellij</li>
       <li><strong>Core Concepts:</strong> Object-Oriented Programming (OOP) ,Data Structures & Algorithms</li>
       <li><strong>Database Knowledge:</strong> Relational Databases, DBMS (Certified - NPTEL)</li>
     </ul>
     <br>
-    <p>I actively apply my skills in real-time projects like a Library Management System and Bank Application using Java, and I've also explored cybersecurity through an internship on <strong>Steganography using Python</strong>.</p>
-    
-    <p>I keep learning and upgrading my technical skills by participating in workshops and online certifications. I’m passionate about backend development, problem-solving, and making efficient applications that solve real-world problems.</p>
+    <p>I actively apply my skills in real-time projects like a Library Management System and Bank Application using
+      Java, and I've also explored cybersecurity through an internship on <strong>Steganography using Python</strong>.
+    </p>
+
+    <p>I keep learning and upgrading my technical skills by participating in workshops and online certifications. I’m
+      passionate about backend development, problem-solving, and making efficient applications that solve real-world
+      problems.</p>
   </section>
   <script>
     const sidebar = document.getElementById("sidebar");
@@ -81,11 +79,12 @@
     function updateNavLinks() {
       const navRight = document.querySelector("nav .nav-right");
       if (window.innerWidth < 845) {
-        navRight.innerHTML = ""; 
+        navRight.innerHTML = "";
       } else {
         navRight.innerHTML = `
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
+        <a href="skills.html" class="active">Skills</a>
         <a href="projects.html">Projects</a>
         <a href="internships.html">Internships</a>
         <a href="certificates.html">Certifications</a>
@@ -100,4 +99,5 @@
     window.addEventListener("resize", updateNavLinks);
   </script>
 </body>
+
 </html>

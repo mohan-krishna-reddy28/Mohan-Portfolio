@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,123 +23,134 @@
 </head>
 
 <body>
-    <div id="sidebar">
-        <span class="close-btn" onclick="closeSidebar()">&#10005;</span>
-        <div class="nav-right">
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="projects.html">Projects</a>
-          <a href="internships.html">Internships</a>
-          <a href="certificates.html">Certifications</a>
-          <a href="contactMe.html">Contact Me</a>
-        </div>
-      </div>
-    
-      <nav>
-        <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
-        <div class="logo"><a href="index.html">Portfolio</a></div>
-        <div class="nav-right">
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="projects.html">Projects</a>
-          <a href="internships.html">Internships</a>
-          <a href="certificates.html">Certifications</a>
-          <a href="contactMe.html">Contact Me</a>
-        </div>
-      </nav>
+  <div id="sidebar">
+    <span class="close-btn" onclick="closeSidebar()">&#10005;</span>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certificates.html" class="active">Certifications</a>
+      <a href="contactMe.html">Contact Me</a>
+    </div>
+  </div>
+
+  <nav>
+    <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    <div class="logo"><a href="index.html">Portfolio</a></div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="internships.html">Internships</a>
+      <a href="certificates.html" class="active">Certifications</a>
+      <a href="contactMe.html">Contact Me</a>
+    </div>
+  </nav>
 
   <section id="certifications">
     <h2>Certifications</h2>
     <p>Below are some of the certifications I’ve earned to enhance my skills and stay updated with industry trends:</p>
     <!-- Certificates List -->
-<ul>
-  <li>
-    <strong>NPTEL – Database Management Systems (DBMS)</strong><br>
-    Completed a 8-week course from NPTEL on database fundamentals including ER models, relational algebra, normalization, and SQL.<br>
-    <button class="btn" data-toggle="modal" data-target="#dbmsModal">View Certificate</button>
-  </li><br>
+    <ul>
+      <li>
+        <strong>NPTEL – Database Management Systems (DBMS)</strong><br>
+        Completed a 8-week course from NPTEL on database fundamentals including ER models, relational algebra,
+        normalization, and SQL.<br>
+        <button class="btn" data-toggle="modal" data-target="#dbmsModal">View Certificate</button>
+      </li><br>
 
-  <li>
-    <strong>CCNA – Introduction to Networks</strong><br>
-    Acquired foundational networking knowledge including OSI Model, TCP/IP, IP addressing, and Ethernet operations.<br>
-    <button class="btn" data-toggle="modal" data-target="#ccnaModal">View Certificate</button>
-  </li><br>
+      <li>
+        <strong>CCNA – Introduction to Networks</strong><br>
+        Acquired foundational networking knowledge including OSI Model, TCP/IP, IP addressing, and Ethernet
+        operations.<br>
+        <button class="btn" data-toggle="modal" data-target="#ccnaModal">View Certificate</button>
+      </li><br>
 
-  <li>
-    <strong>EDUNET Foundation & AICTE – IBM SkillBuild</strong><br>
-    Completed modules on cloud computing, soft skills, and agile methodologies through IBM SkillBuild platform.<br>
-    <button class="btn" data-toggle="modal" data-target="#ibmModal">View Certificate</button>
-  </li><br>
-</ul>
+      <li>
+        <strong>EDUNET Foundation & AICTE – IBM SkillBuild</strong><br>
+        Completed modules on cloud computing, soft skills, and agile methodologies through IBM SkillBuild platform.<br>
+        <button class="btn" data-toggle="modal" data-target="#ibmModal">View Certificate</button>
+      </li><br>
+    </ul>
 
-<!-- DBMS Certificate Modal -->
-<div class="modal fade" id="dbmsModal" tabindex="-1" aria-labelledby="dbmsLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" style="max-width: 60%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="dbmsLabel">NPTEL – DBMS Certificate</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="text-white" aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-0">
-        <iframe src="https://docs.google.com/gview?url=https://mohan-krishna-reddy28.github.io/portfolio/NPTEL(DBMS).pdf&embedded=true"
-                width="100%" height="500px" style="border: none;"></iframe>
-      </div>
-      <div class="modal-footer">
-        <a href="NPTEL(DBMS).pdf" class="btn" target="_blank">
-            Open in New Tab
-        </a>
+    <!-- DBMS Certificate Modal -->
+    <div class="modal fade" id="dbmsModal" tabindex="-1" aria-labelledby="dbmsLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" style="max-width: 60%;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="dbmsLabel">NPTEL – DBMS Certificate</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="text-white" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe
+              src="https://docs.google.com/gview?url=https://mohan-krishna-reddy28.github.io/portfolio/NPTEL(DBMS).pdf&embedded=true"
+              width="100%" height="500px" style="border: none;">
+            </iframe>
+          </div>
+          <div class="modal-footer">
+            <a href="https://drive.google.com/file/d/1_e-YPYWfmHmUGqp3Hjz2moXqF7x64g1W/view" class="btn"
+              target="_blank">
+              Open in New Tab
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- CCNA Certificate Modal -->
-<div class="modal fade" id="ccnaModal" tabindex="-1" aria-labelledby="ccnaLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" style="max-width: 60%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="ccnaLabel">CCNA – Introduction to Networks Certificate</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="text-white" aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-0">
-        <iframe src="https://docs.google.com/gview?url=https://mohan-krishna-reddy28.github.io/portfolio/CCNA(Introduction%20to%20networks).pdf&embedded=true"
-                width="100%" height="500px" style="border: none;"></iframe>
-      </div>
-      <div class="modal-footer">
-        <a href="CCNA(Introduction to networks).pdf" class="btn" target="_blank">
-            Open in New Tab
-        </a>
+    <!-- CCNA Certificate Modal -->
+    <div class="modal fade" id="ccnaModal" tabindex="-1" aria-labelledby="ccnaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" style="max-width: 60%;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ccnaLabel">CCNA – Introduction to Networks Certificate</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="text-white" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe
+              src="https://docs.google.com/gview?url=https://mohan-krishna-reddy28.github.io/portfolio/CCNA(Introduction%20to%20networks).pdf&embedded=true"
+              width="100%" height="500px" style="border: none;"></iframe>
+          </div>
+          <div class="modal-footer">
+            <a href="https://drive.google.com/file/d/1eldxPuqRumNzAoeMWERr5QY_xE8lOjTw/view" class="btn"
+              target="_blank">
+              Open in New Tab
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- IBM SkillBuild Certificate Modal -->
-<div class="modal fade" id="ibmModal" tabindex="-1" aria-labelledby="ibmLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" style="max-width: 60%;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="ibmLabel">IBM SkillBuild Certificate</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="text-white" aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body p-0">
-        <iframe src="https://docs.google.com/gview?url=https://mohan-krishna-reddy28.github.io/portfolio/EDUNET%20FOUNDATION%20and%20AICTE%20(IBM%20SkillBuild).pdf&embedded=true"
-                width="100%" height="500px" style="border: none;"></iframe>
-      </div>
-      <div class="modal-footer">
-        <a href="EDUNET FOUNDATION and AICTE (IBM SkillBuild).pdf" class="btn" target="_blank">
-            Open in New Tab
-        </a>
+    <!-- IBM SkillBuild Certificate Modal -->
+    <div class="modal fade" id="ibmModal" tabindex="-1" aria-labelledby="ibmLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl" style="max-width: 60%;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ibmLabel">IBM SkillBuild Certificate</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="text-white" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe
+              src="https://docs.google.com/gview?url=https://mohan-krishna-reddy28.github.io/portfolio/EDUNET%20FOUNDATION%20and%20AICTE%20(IBM%20SkillBuild).pdf&embedded=true"
+              width="100%" height="500px" style="border: none;"></iframe>
+          </div>
+          <div class="modal-footer">
+            <a href="https://drive.google.com/file/d/1JxL0Z4w0bxaUaeABPFr8sF_ZW_Zmo1EN/view" class="btn"
+              target="_blank">
+              Open in New Tab
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
   </section>
   <script>
@@ -160,14 +171,15 @@
     function updateNavLinks() {
       const navRight = document.querySelector("nav .nav-right");
       if (window.innerWidth < 845) {
-        navRight.innerHTML = ""; 
+        navRight.innerHTML = "";
       } else {
         navRight.innerHTML = `
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="skills.html">Skills</a>
         <a href="projects.html">Projects</a>
         <a href="internships.html">Internships</a>
-        <a href="certificates.html">Certifications</a>
+        <a href="certificates.html" class="active">Certifications</a>
         <a href="contactMe.html">Contact Me</a>
       `;
       }
@@ -179,4 +191,5 @@
     window.addEventListener("resize", updateNavLinks);
   </script>
 </body>
+
 </html>

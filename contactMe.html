@@ -25,12 +25,13 @@
     <div id="sidebar">
         <span class="close-btn" onclick="closeSidebar()">&#10005;</span>
         <div class="nav-right">
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="skills.html">Skills</a>
           <a href="projects.html">Projects</a>
           <a href="internships.html">Internships</a>
           <a href="certificates.html">Certifications</a>
-          <a href="contactMe.html">Contact Me</a>
+          <a href="contactMe.html" class="active">Contact Me</a>
         </div>
       </div>
     
@@ -38,12 +39,13 @@
         <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
         <div class="logo"><a href="index.html">Portfolio</a></div>
         <div class="nav-right">
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="skills.html">Skills</a>
           <a href="projects.html">Projects</a>
           <a href="internships.html">Internships</a>
           <a href="certificates.html">Certifications</a>
-          <a href="contactMe.html">Contact Me</a>
+          <a href="contactMe.html" class="active">Contact Me</a>
         </div>
       </nav>
 
@@ -85,12 +87,13 @@
         navRight.innerHTML = "";
       } else {
         navRight.innerHTML = `
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="skills.html">Skills</a>
         <a href="projects.html">Projects</a>
         <a href="internships.html">Internships</a>
         <a href="certificates.html">Certifications</a>
-        <a href="contactMe.html">Contact Me</a>
+        <a href="contactMe.html" class="active">Contact Me</a>
       `;
       }
     }
