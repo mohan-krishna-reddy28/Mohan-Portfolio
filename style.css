@@ -10,6 +10,15 @@ body {
   position: relative;
   color: #fff;
 }
+.custom-resume-modal {
+  max-width: 70%;
+}
+
+@media (max-width: 831px) {
+  .custom-resume-modal {
+    max-width: 100%;
+  }
+}
 
 body::before {
   content: "";
@@ -210,7 +219,7 @@ ul {
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 830px) {
   nav {
     padding: 10px 20px;
   }
@@ -269,7 +278,7 @@ ul {
   display: flex;
 }
 
-@media (max-width: 845px) {
+@media (max-width: 830px) {
   .hamburger {
     font-size: 23px;
     display: block;
@@ -278,6 +287,10 @@ ul {
   .logo {
     margin-left: 135px;
     transform: translateX(-50%);
+  }
+
+  .nav-right {
+    display: none !important; /* Hide top nav links below 830px */
   }
 }
 
