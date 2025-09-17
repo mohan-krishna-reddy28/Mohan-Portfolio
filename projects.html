@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com; style-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self';">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com; style-src 'self' https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self';">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Mohan Krishna Reddy's Portfolio showcasing skills, projects, and experience.">
@@ -48,27 +49,38 @@
     <h2>Projects</h2>
 
     <div class="project">
-      <p><strong>Sleep Disorder Detection Using Deep Learning</strong> – A web application built with Django that uses deep learning to classify and detect various types of sleep
-disorders based on input data.</p>
-      <a href="https://github.com/mohan-krishna-reddy28/Sleep_Disorder" class="btn" target="_blank">View Code</a>
+      <p><strong>Sleep Disorder Detection Using Deep Learning</strong> – A web application built with Django that uses
+        deep learning to classify and detect various types of sleep
+        disorders based on input data.</p>
+      <button class="button">
+        <a href="https://github.com/mohan-krishna-reddy28/Sleep_Disorder" class="link" target="_blank">View Code</a>
+      </button>
     </div>
 
     <br>
 
     <div class="project">
       <p>
-        <strong>Portfolio Website</strong> – A personal portfolio website created using HTML, CSS and BootStrap to showcase my skills, projects, certifications, and contact details. The site is structured with separate pages for each section and features a responsive design. It serves as a digital resume to present my work and achievements to recruiters and visitors.
+        <strong>Portfolio Website</strong> – A personal portfolio website created using HTML, CSS and BootStrap to
+        showcase my skills, projects, certifications, and contact details. The site is structured with separate pages
+        for each section and features a responsive design. It serves as a digital resume to present my work and
+        achievements to recruiters and visitors.
       </p>
-      <a href="https://github.com/mohan-krishna-reddy28/Portfolio" class="btn" target="_blank">View Code</a>
+      <button class="button">
+        <a href="https://github.com/mohan-krishna-reddy28/Portfolio" class="link" target="_blank">View Code</a>
+      </button>
     </div>
 
-  <br>
+    <br>
 
     <div class="project">
-      <p><strong>Train Booking System</strong> – A Java project showcasing Object-Oriented Programming concepts like Encapsulation, Inheritance, and Polymorphism for managing booking and user data.</p>
-      <a href="https://github.com/mohan-krishna-reddy28/Train_Booking_System" class="btn" target="_blank">View Code</a>
+      <p><strong>Train Booking System</strong> – A Java project showcasing Object-Oriented Programming concepts like
+        Encapsulation, Inheritance, and Polymorphism for managing booking and user data.</p>
+        <button class="button">
+          <a href="https://github.com/mohan-krishna-reddy28/Train_Booking_System" class="link" target="_blank">View Code</a>
+        </button>
     </div>
-    
+
     <br>
 
   </section>
@@ -89,7 +101,7 @@ disorders based on input data.</p>
     function updateNavLinks() {
       const navRight = document.querySelector("nav .nav-right");
       if (window.innerWidth < 845) {
-        navRight.innerHTML = ""; 
+        navRight.innerHTML = "";
       } else {
         navRight.innerHTML = `
         <a href="index.html">Home</a>
@@ -109,4 +121,5 @@ disorders based on input data.</p>
     window.addEventListener("resize", updateNavLinks);
   </script>
 </body>
+
 </html>
