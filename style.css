@@ -219,6 +219,10 @@ ul {
   text-decoration: none;
   color: white;
 }
+.link:hover{
+  text-decoration: none;
+  color: white;
+}
 /* ---------- Responsive Styles ---------- */
 @media (max-width: 1024px) {
   nav {
@@ -288,8 +292,7 @@ ul {
 
 .button:hover {
   box-shadow: inset 0px 0px 13px #00ffcc;
-  text-decoration: none;
-  color: white;
+  
 }
 
 
