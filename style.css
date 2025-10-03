@@ -477,7 +477,8 @@ button:hover::after {
 
 .project-card {
   width: 290px;
-  height: 400px;
+  min-height: 450px;
+  max-height: 700px;
   margin: 15px;
   border: 1px solid rgb(255, 255, 255);
   background-size: cover;
@@ -515,7 +516,8 @@ button:hover::after {
   color: white;
   width: 140px;
   height: 45px;
-  border-radius: 10px
+  border-radius: 10px;
+  border:none;
 }
 
 .form-control.custom-input {
