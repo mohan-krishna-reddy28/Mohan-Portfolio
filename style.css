@@ -25,7 +25,6 @@ body {
   font-size: 1rem;
   margin: 10px 0;
   color: #fff;
-  /* adjust if needed */
 }
 
 #contact p .icon {
@@ -40,23 +39,12 @@ body::before {
   content: "";
   position: fixed;
   top: 0;
-  left: 0;
+  left: 3;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
-
-.nav-right a.active {
-  color: #a64bf4;
-  font-weight: bold;
-}
-
-.nav-right a.active::after {
-  width: 100%;
-  background-color: #a64bf4;
-}
-
 
 
 .modal-content {
@@ -68,78 +56,54 @@ body::before {
 }
 
 /* NAVIGATION */
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #1e1e1e;
-  padding: 10px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-}
-
-.logo {
-  transform: translateX(-50%);
-}
-
-.logo a {
-  font-size: 33px;
+.navbar-nav a.active {
+  color: white !important;
   font-weight: bold;
-  color: #00ffcc;
-  text-decoration: none;
 }
 
-.nav-right {
-  display: flex;
-  gap: 15px;
+.navbar-nav a.active::after {
+  width: 90%;
+  background-color: yellow;
+}
+.navbar-brand {
+  font-weight: bold ;
+  color: #00ffcc !important;
+
 }
 
-.nav-right a {
+
+.navbar-nav a {
   position: relative;
-  color: #aaa;
+  color: #aaa !important;
   text-decoration: none;
   font-size: 18px;
   width: max-content;
   transition: color 0.3s ease-in-out;
 }
 
-.nav-right a::after {
+.navbar-nav a::after {
+  margin: 2px;
   content: "";
   position: absolute;
-  bottom: -5px;
-  left: 0;
+  bottom: 3px;
+  left: 1px;
   width: 0%;
   height: 2px;
   background-color: #00ffcc;
   transition: width 0.3s ease-in-out;
 }
 
-.nav-right a:hover {
-  color: white;
+.navbar-nav a:hover {
+  color: white !important;
 
 }
 
-.nav-right a:hover::after {
-  width: 100%;
-}
-
-/* Hamburger Icon */
-.hamburger {
-  display: none;
-  font-size: 25px;
-  cursor: pointer;
-  position: absolute;
-  left: 20px;
-  top: 15px;
-  z-index: 1100;
-  color: #00ffcc;
+.navbar-nav a:hover::after {
+  width: 90%;
 }
 
 /* Sections */
-header,
-section {
+header,section{
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
@@ -149,17 +113,29 @@ h1,
 h2 {
   color: #00ffcc;
 }
-
-
-h1 span {
-  color: white;
-  letter-spacing: 2px;
+.theme-color{
+  color: #00ffcc;
 }
-
 
 .close {
-  background-color: red !important;
+  background-color: red !important;  /* Remove default button styles */
+  border: none;
+  padding: 10px;          /* Adjust padding */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  align-self: stretch;
 }
+
+.close img {
+  display: block;
+  width: 20px;               /* Adjust size of image */
+  height: 20px;
+  object-fit: contain;
+}
+
 
  .btn {
   display: inline-block;
@@ -199,22 +175,28 @@ ul {
 }
 
 /* Hover Effect */
+.links a {
+  color: white; 
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.5s ease-in-out  ; 
+}
+
 .links a:hover {
-  color: #0077b5;
   text-decoration: none;
 }
-
-.links a:hover i.fa-linkedin {
+.links a:hover .fa-linkedin {
   color: #0077b5;
 }
 
-.links a:hover i.fa-github {
+.links a:hover .fa-github {
   color: #6a6868;
 }
 
-.links a:hover i.fa-instagram {
-  color: #C13584;
+.links a:hover .fa-instagram {
+  color: #C13584; 
 }
+
 .link{
   text-decoration: none;
   color: white;
@@ -469,4 +451,34 @@ ul {
 
 .close-btn:hover {
   color: #ff4d4d;
+}
+
+/* project-file styles */
+.heading{
+  color: #00ffcc;
+}
+.project-card{
+  width: 290px;
+  height: 400px;
+  margin: 15px;
+  border: 1px solid rgb(255, 255, 255);
+  background-size: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out ;
+}
+.image{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card-heading{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.card-para{
+  font-size: 15px;
+  color: grey;
+}
+.project-card:hover{
+  transform: scale(1.03);
+  background-color: #000000;
 }
