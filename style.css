@@ -65,8 +65,9 @@ body::before {
   width: 90%;
   background-color: yellow;
 }
+
 .navbar-brand {
-  font-weight: bold ;
+  font-weight: bold;
   color: #00ffcc !important;
 
 }
@@ -103,7 +104,8 @@ body::before {
 }
 
 /* Sections */
-header,section{
+header,
+section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
@@ -113,14 +115,17 @@ h1,
 h2 {
   color: #00ffcc;
 }
-.theme-color{
+
+.theme-color {
   color: #00ffcc;
 }
 
 .close {
-  background-color: red !important;  /* Remove default button styles */
+  background-color: red !important;
+  /* Remove default button styles */
   border: none;
-  padding: 10px;          /* Adjust padding */
+  padding: 10px;
+  /* Adjust padding */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -131,13 +136,14 @@ h2 {
 
 .close img {
   display: block;
-  width: 20px;               /* Adjust size of image */
+  width: 20px;
+  /* Adjust size of image */
   height: 20px;
   object-fit: contain;
 }
 
 
- .btn {
+.btn {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
@@ -160,51 +166,60 @@ ul {
   padding-left: 20px;
 }
 
+/* Common link styling */
 .links a {
-  display: inline-block;
-  margin: 10px 0px;
-  padding: 0px 10px;
+  display: inline-flex;           /* Already using d-flex, keep for consistency */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                       /* space between icon and text */
+  width: 150px;
+  height: 47px;
+  border-radius: 10px;
+  border: 1px solid #6a6868;
   text-decoration: none;
-  color: #e3dede;
-  font-size: 18px;
-  transition: all 0.3s ease;
+  
 }
 
-.links a i {
-  margin-right: 5px;
+/* LinkedIn hover */
+.links a:nth-child(1):hover {
+  background-color: #0077b5;
+  color: white;
+  border-color: #0077b5;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 119, 181, 0.4);
 }
 
-/* Hover Effect */
-.links a {
-  color: white; 
-  text-decoration: none;
-  margin-right: 15px;
-  transition: color 0.5s ease-in-out  ; 
+
+/* GitHub hover */
+.links a:nth-child(2):hover {
+  background-color: #24292e;
+  color: white;
+  border-color: #24292e;
+  box-shadow: 0 4px 10px rgba(36, 41, 46, 0.4);
+  transition: all 0.2s ease-in-out;
 }
 
-.links a:hover {
-  text-decoration: none;
-}
-.links a:hover .fa-linkedin {
-  color: #0077b5;
+
+/* Instagram hover */
+.links a:nth-child(3):hover {
+  background-color: #C13584;
+  color: white;
+  border-color: #C13584;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(193, 53, 132, 0.4);
 }
 
-.links a:hover .fa-github {
-  color: #6a6868;
-}
 
-.links a:hover .fa-instagram {
-  color: #C13584; 
-}
 
-.link{
+.link {
   text-decoration: none;
   color: white;
 }
-.link:hover{
+
+.link:hover {
   text-decoration: none;
-  color: white;
 }
+
 /* ---------- Responsive Styles ---------- */
 @media (max-width: 1024px) {
   nav {
@@ -228,6 +243,7 @@ ul {
   background-color: var(--bg-color);
   border-radius: 1.25rem;
 }
+
 .button {
   width: 10em;
   position: relative;
@@ -268,13 +284,14 @@ ul {
   transition: 0.5s;
 }
 
-.button:hover::before, button:hover::after {
+.button:hover::before,
+button:hover::after {
   transform: scale(0)
 }
 
 .button:hover {
   box-shadow: inset 0px 0px 13px #00ffcc;
-  
+
 }
 
 
@@ -355,7 +372,7 @@ ul {
   100% {
     -webkit-transform: translateY(-400%);
     transform: translateY(-400%);
-  } 
+  }
 }
 
 
@@ -454,31 +471,70 @@ ul {
 }
 
 /* project-file styles */
-.heading{
+.heading {
   color: #00ffcc;
 }
-.project-card{
+
+.project-card {
   width: 290px;
   height: 400px;
   margin: 15px;
   border: 1px solid rgb(255, 255, 255);
   background-size: cover;
   border-radius: 20px;
-  transition: transform 0.3s ease-in-out ;
+  transition: transform 0.3s ease-in-out;
 }
-.image{
+
+.image {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.card-heading{
-  font-size: 22px;
+
+.card-heading {
+  font-size: 21px;
   margin-bottom: 20px;
 }
-.card-para{
-  font-size: 15px;
+
+.card-para {
+  font-size: 14 px;
   color: grey;
 }
-.project-card:hover{
+
+.project-card:hover {
   transform: scale(1.03);
+  border-color: yellow;
+  border-width: 2px;
   background-color: #000000;
 }
+
+.page-up-margin {
+  margin-top: 70px;
+}
+
+.send-msg-button {
+  color: white;
+  width: 140px;
+  height: 45px;
+  border-radius: 10px
+}
+
+.form-control.custom-input {
+  background-color: #3d3d3e; 
+  color: #ffffff;             
+  border: none;               
+  border-radius: 6px;          
+  padding: 10px;
+}
+
+.form-control.custom-input::placeholder {
+  color: white;  
+  opacity: 1;       
+}
+
+.form-control.custom-input:focus {
+  background-color: #2c2f33; 
+  color: #fff;
+  box-shadow: 0 0 5px #0d6efd; 
+  border: 1px solid #0d6efd;
+}
+

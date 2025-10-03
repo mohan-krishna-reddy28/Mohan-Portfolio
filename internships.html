@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
     <div class="container-fluid mx-1 mx-md-5">
       <a class="navbar-brand fs-4" href="index.html">Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -41,7 +41,7 @@
     </div>
   </nav>
 
-  <section class="text-white">
+  <section class="text-white page-up-margin">
     <h2 class="theme-color">Internships</h2>
 
     <p><strong>Cybersecurity Internship</strong> – EDUNET FOUNDATION & AICTE (IBM SkillBuild)</p>
@@ -49,74 +49,42 @@
     <button class="button mr-2">
       <a href="https://github.com/mohan-krishna-reddy28/Steganography" class="link" target="_blank">View Code</a>
     </button>
-    <button class="button ml-2" data-toggle="modal" data-target="#ibmModal">View Certificate</button>
 
-    <!-- IBM SkillBuild Certificate Modal -->
-    <div class="modal fade" id="ibmModal" tabindex="-1" aria-labelledby="ibmLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl" style="max-width: 60%;">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="ibmLabel">IBM SkillBuild Certificate</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span class="text-white" aria-hidden="true">&times;</span>
-            </button>
+    <button type="button" class="text-white button" data-bs-toggle="modal" data-bs-target="#IbmcerModal">
+      View Certificate
+    </button>
+
+    <div class="modal fade" id="IbmcerModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header d-flex justify-content-between align-items-center">
+            <h5 class="modal-title theme-color" id="resumeModalLabel">IBM SkillBuild</h5>
+            <button type="button" class="close " data-bs-dismiss="modal" aria-label="Close"><img src="close.svg"
+                alt=""></button>
           </div>
+
           <div class="modal-body p-0">
-            <div class="modal-body p-0">
-              <iframe src="https://cdn.jsdelivr.net/gh/mohan-krishna-reddy28/Mohan-Portfolio@main/Ibm_SkillBuild.pdf"
-                width="100%" height="500px" style="border: none;"></iframe>
-            </div>
-
+            <iframe src="Ibm_SkillBuild.pdf"
+              width="100%" height="500px" style="border: none;"></iframe>
           </div>
-          <div class="modal-footer">
-            <a href="https://drive.google.com/file/d/1JxL0Z4w0bxaUaeABPFr8sF_ZW_Zmo1EN/view" class="btn"
-              target="_blank">
-              Open in New Tab
-            </a>
 
+          <div class="modal-footer bg-black">
+            <button class="button">
+
+              <a href="https://drive.google.com/file/d/1JxL0Z4w0bxaUaeABPFr8sF_ZW_Zmo1EN/view"
+                class="text-decoration-none text-white" target="_blank" rel="noopener noreferrer">
+                Open in New Tab
+              </a>
+            </button>
           </div>
         </div>
       </div>
     </div>
 
   </section>
-  <script>
-    const sidebar = document.getElementById("sidebar");
-    const hamburger = document.querySelector(".hamburger");
 
-    function openSidebar() {
-      sidebar.classList.add("open");
-    }
-
-    function closeSidebar() {
-      sidebar.classList.remove("open");
-    }
-
-
-    hamburger.addEventListener("click", openSidebar);
-
-    function updateNavLinks() {
-      const navRight = document.querySelector("nav .nav-right");
-      if (window.innerWidth < 845) {
-        navRight.innerHTML = "";
-      } else {
-        navRight.innerHTML = `
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="internships.html" class="active">Internships</a>
-        <a href="certificates.html">Certifications</a>
-        <a href="contactMe.html">Contact Me</a>
-      `;
-      }
-    }
-
-    window.addEventListener("load", updateNavLinks);
-
-
-    window.addEventListener("resize", updateNavLinks);
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
